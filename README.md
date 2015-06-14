@@ -161,6 +161,8 @@ Supports iOS 7.1 and later
 mwfire web development<br>
 [www.mwfire.de](http://www.mwfire.de)
 
+Additional features: @kosso 
+
 ## License
 
 Licensed under the Apache License, Version 2.0 (the "License")
