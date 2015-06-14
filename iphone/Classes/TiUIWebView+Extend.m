@@ -15,21 +15,23 @@
 -(void)setZoomScale_:(id)value
 {
     CGFloat scale = [TiUtils floatValue:value def:0.0f];
-   // [[self scrollview] setZoomScale:scale animated:YES];
-    [[[self subviews] lastObject ] setZoomScale:scale animated:YES];
+    [[self scrollview] setZoomScale:scale animated:YES];
+   // [[[self subviews] lastObject ] setZoomScale:scale animated:YES];
 }
 
 - (void)disableScrolling:(id)value
 {
-    BOOL allowed = [TiUtils boolValue:value def:YES];
-    [[[self subviews] lastObject ] setScrollEnabled:allowed];
+    BOOL allowed = ![TiUtils boolValue:value def:YES];
+    //[[[self subviews] lastObject ] setScrollEnabled:allowed];
+    [[self scrollview] setScrollEnabled:allowed];
+    
 }
 
 
 - (void)scrollToTop:(id)args
 {
     BOOL animated = [TiUtils boolValue:@"animated" properties:[args objectAtIndex:0] def:YES];
-    [[[self subviews] lastObject ] setContentOffset:CGPointZero animated:animated];
+    [[self scrollview] setContentOffset:CGPointZero animated:animated];
 }
 
 -(void)scrollTo:(id)args
@@ -38,7 +40,7 @@
     CGFloat offsetY = [TiUtils floatValue:@"y" properties:[args objectAtIndex:0] def:0];
     BOOL animated = [TiUtils boolValue:@"animated" properties:[args objectAtIndex:0] def:YES];
     CGPoint newOffset = CGPointMake(offsetX, offsetY);
-    [[[self subviews] lastObject ] setContentOffset:newOffset animated:animated];
+    [[self scrollview] setContentOffset:newOffset animated:animated];
 
 }
 
@@ -46,8 +48,8 @@
 {
     BOOL animated = [TiUtils boolValue:@"animated" properties:[args objectAtIndex:0] def:YES];
     
-    UIScrollView *currScrollView = [[self subviews] lastObject ];
-    
+    UIScrollView *currScrollView = [self scrollview];
+                                    
     CGSize svContentSize = currScrollView.contentSize;
     CGSize svBoundSize = currScrollView.bounds.size;
     CGFloat svBottomInsets = currScrollView.contentInset.bottom;
