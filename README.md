@@ -19,6 +19,8 @@ Copy the module to your Titanium module folder, typically
 ## Adding the module to your project
 In Titanium Studio, add the module to your project. Open tiapp.xml and click the <b>+</b> button in the module section. Select <i>de.mwfire.extwebview</i> and add it.
 
+NOTE: Unlike most other Ti modiles, you do not need to `require` this module like you might normally, since it's a 'drop-in' extension to Ti.UI.webView. Just add it to your project as shown above and use the new methods on a normal Ti.UI.webView. 
+
 
 ## Reference
 
