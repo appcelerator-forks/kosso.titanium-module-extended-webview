@@ -1,11 +1,11 @@
-# ExtendedWebView Module 0.5
+# ExtendedWebView Module 0.6
 
 ## Description
 
 This module extends the original Ti.UI.WebView by adding several new features.
 
 ###Note:
-Version 0.5 of this module is not backwards compatible.
+Version 0.5+ of this module is not backwards compatible.
 Please see the **usage** paragraph for more information.
 
 ## Installation
@@ -39,6 +39,10 @@ Scrolls to the top of a WebView.<br>
 `scrollToBottom({ animated: BOOL })`<br>
 Scrolls to the bottom of a WebView.<br>
 *animated* optional, defaults to TRUE
+
+`disableScrolling(BOOL)` (since 0.6)<br>
+Disable scrolling (but not interactivity) on a webview.<br>
+
 
 ## Usage
 
