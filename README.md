@@ -147,6 +147,9 @@ Minimum Titanium SDK is 3.5.0.GA<br>
 Supports iOS 7.1 and later 
 
 ##Changelog
+####V0.6
+- Disable scrolling.
+
 ####V0.5
 - Extend Ti.UI.WebView instead of a standalone module
 - Fixed build error on device
