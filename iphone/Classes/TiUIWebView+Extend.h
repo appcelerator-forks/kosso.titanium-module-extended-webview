@@ -10,6 +10,7 @@
 #import "TiUIWebView.h"
 
 @interface TiUIWebView (Extend)
+- (void)disableScrolling:(id)args;
 - (void)scrollTo:(id)args;
 - (void)scrollToTop:(id)args;
 - (void)scrollToBottom:(id)args;

@@ -32,4 +32,13 @@
     [(TiUIWebView *)[self view] scrollToBottom:args];
 }
 
+-(void)disableScrolling:(id)args
+{
+    ENSURE_UI_THREAD(disableScrolling, args);
+    [(TiUIWebView *)[self view] disableScrolling:args];
+}
+
+
+
+
 @end
